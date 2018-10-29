@@ -7,7 +7,7 @@ const downloadDate = () => (dispatch) => {
         .then((response) => {
             const dateForClient = new Date(response.data.date + (new Date(response.data.date).getTimezoneOffset() / 60) * 60 * 60 * 1000);
 
-            dispatch(getDate(dateForClient, response.data.dateString));
+            dispatch(getDate(dateForClient, response.data.dateString, response.data.server));
         })
         .catch((error) => {
             console.log(error);

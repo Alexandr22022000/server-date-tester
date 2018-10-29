@@ -4,6 +4,7 @@ const defaultState = {
     localDate: new Date(),
     serverDate: new Date(),
     serverDateString: new Date() + "",
+    server: new Date() + "",
 };
 
 const conveniences = (state = defaultState, action) => {
@@ -19,6 +20,7 @@ const conveniences = (state = defaultState, action) => {
                 ...state,
                 serverDate: action.date,
                 serverDateString: action.dateString,
+                server: action.server,
             };
 
         default:

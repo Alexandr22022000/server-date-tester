@@ -10,6 +10,8 @@ class Main extends React.Component {
 
                 <h3>{"Локальная дата: " + this.props.localDate}</h3>
                 <h3>{"Дата сервера: " + this.props.serverDateString}</h3>
+                <h3>{"Дата и время сервера: " + this.props.server}</h3>
+                <h3>{"Дата и время клиента: " + new Date()}</h3>
                 <h3>{"Дата сервера в формате date: " + this.props.serverDate}</h3>
             </div>
         );

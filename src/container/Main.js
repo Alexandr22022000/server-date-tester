@@ -7,6 +7,7 @@ const mapStateToProps = (state) => ({
     localDate: state.main.localDate,
     serverDate: state.main.serverDate,
     serverDateString: state.main.serverDateString,
+    server: state.main.server,
 });
 
 const mapDispatchToProps = {

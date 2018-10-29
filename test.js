@@ -26,7 +26,11 @@ app.post('/set-time', (req, res) => {
 });
 
 app.get('/get-time', (req, res) => {
-    res.status(200).jsonp({date: store.time.getTime(), dateString: store.time + ""});
+    res.status(200).jsonp({
+        date: store.time.getTime(),
+        dateString: store.time + "",
+        server: new Date() + "",
+    });
 });
 
 app.use(express.static('build'));
