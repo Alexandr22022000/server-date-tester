@@ -3,9 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "axios-jsonp": "^1.0.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "moment": "^2.22.2",
     "react": "^16.6.0",
+    "react-calendar": "^2.17.5",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5"
+    "react-redux": "^5.1.0",
+    "react-scripts": "2.0.5",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

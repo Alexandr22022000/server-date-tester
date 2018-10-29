@@ -1,0 +1,102 @@
+.calendar {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.calendar__hard_container {
+    width: 155px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid #a0a096;
+    z-index: 2;
+}
+
+.calendar__soft_container {
+    position: absolute;
+    width: 220px;
+    z-index: 2;
+}
+
+.calendar__key_img {
+    background-image: url("https://image.freepik.com/free-icon/no-translate-detected_318-49622.jpg");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+}
+
+.calendar__key {
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: inline-block;
+    border-left: 1px solid #a0a096;
+    z-index: 2;
+}
+
+.calendar__input {
+    width: 125px;
+    height: 15px;
+    margin-left: 2px;
+    top: -6px;
+    display: inline-block;
+    position: relative;
+    outline: none;
+    font-size: 18px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.calendar__soft_container_hidden {
+    display: none;
+}
+
+.calendar__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.calendar__background_hidden {
+    display: none;
+}
+
+
+
+/*
+---Calendar---
+ */
+
+.react-calendar__navigation__label, .react-calendar__navigation__arrow {
+    font-size: 12px;
+    padding: 0;
+}
+
+.react-calendar__navigation__arrow {
+    min-width: 30px;
+}
+
+.react-calendar__navigation {
+    min-width: 20px;
+    height: 30px;
+    margin-bottom: 0;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    font-size: 10px;
+}
+
+.react-calendar__month-view__days__day {
+    height: 30px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.calendar_error {
+    border-bottom: 2px red solid;
+    background-color: #fcd2d1;
+}
