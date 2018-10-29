@@ -5,6 +5,7 @@ const express = require('express'),
     store = {
         time: new Date(),
         timeSeconds: new Date().getTime(),
+        timezone: 7,
     };
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -29,7 +30,7 @@ app.get('/get-time', (req, res) => {
     res.status(200).jsonp({
         date: store.time.getTime(),
         dateString: store.time + "",
-        server: new Date() + "",
+        server: new Date(Date.now() + (store.timezone * 60 * 60 * 1000)) + "",
     });
 });
 
