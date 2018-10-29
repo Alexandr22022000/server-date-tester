@@ -3,7 +3,9 @@ import getCleanUrl from '../HTTP/getCleanUrl';
 import changeDate from '../actions/changeDate';
 
 const uploadDate = (date) => (dispatch) => {
-    HTTP.post(getCleanUrl() + "/set-time", {date: date.getTime()})
+    const dateForServer = new Date(date.getTime() - (date.getTimezoneOffset() / 60) * 60 * 60 * 1000);
+
+    HTTP.post(getCleanUrl() + "/set-time", {date: dateForServer.getTime()})
         .then((response) => {
             dispatch(changeDate(date));
         })

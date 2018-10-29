@@ -5,8 +5,9 @@ import getDate from '../actions/getDate';
 const downloadDate = () => (dispatch) => {
     HTTP.get(getCleanUrl() + "/get-time")
         .then((response) => {
-            console.log(response);
-            dispatch(getDate(new Date(response.data.date), response.data.dateString));
+            const dateForClient = new Date(response.data.date + (new Date(response.data.date).getTimezoneOffset() / 60) * 60 * 60 * 1000);
+
+            dispatch(getDate(dateForClient, response.data.dateString));
         })
         .catch((error) => {
             console.log(error);
